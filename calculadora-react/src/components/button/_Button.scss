@@ -1,0 +1,12 @@
+button{
+    &.digit{
+        background-color: #111;
+    }
+    &.op{
+        background-color: #222a;
+    }
+    &.equal{
+        background-color: #143b5a;
+    }
+    color: #eee;
+}
