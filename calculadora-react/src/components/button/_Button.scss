@@ -1,12 +1,25 @@
 button{
     &.digit{
-        background-color: #111;
+        background-color: #050505;
     }
     &.op{
-        background-color: #222a;
+        background-color: #222;
     }
+    &.digit:hover, &.op:hover{
+        background-color: #555;
+    }
+
     &.equal{
-        background-color: #143b5a;
+        background-color: #033d6d;
+    }
+    &.equal:hover{
+        background-color: #0572c5;
+    }
+    
+    &.double-span{
+        grid-column: 1 / span 2;
     }
     color: #eee;
+    height: 100%;
+    border: none;
 }

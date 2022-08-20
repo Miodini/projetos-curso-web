@@ -1,9 +1,9 @@
 import React from 'react'
 
 export default function Button(props){
-    const colClass = props.colClass || 'col'     // Segue o arranjo padrão das colunas caso não seja especificada a propriedade
     const typeClass = props.type || ''
+    const spanClass = props.span || ''
     return (
-        <button className={`${colClass} ${typeClass}`}>{props.label}</button>
+        <button className={`${spanClass} ${typeClass}`}>{props.label}</button>
     )
 }

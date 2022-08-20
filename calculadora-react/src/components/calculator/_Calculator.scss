@@ -1,5 +1,17 @@
 .calculator{
+    display: grid;
     width: 320px;
-    height: 500px;
-    background-color: #333a;
+    height: 450px;
+    background-color: #444;
+    grid-template-rows: 3rem 1fr 50px 50px 50px 50px 50px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2px;
+    h1{
+        font-family: Helvetica, sans-serif;
+        grid-column: 1 / span 4;
+    }
+    .visor{
+        grid-column: 1 / span 4;
+        font-size: 2em;
+    }
 }
