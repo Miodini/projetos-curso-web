@@ -5,19 +5,25 @@ button{
     &.op{
         background-color: #222;
     }
-    &.digit:hover, &.op:hover{
+    &.digit:hover:enabled, &.op:hover:enabled{      // Somente para botões não desabilitados
         background-color: #555;
     }
 
     &.equals{
         background-color: #033d6d;
     }
-    &.equals:hover{
+    &.equals:hover:enabled{
         background-color: #0572c5;
     }
     
     &.double-span{
         grid-column: 1 / span 2;
+    }
+    &.triple-span{
+        grid-column: 1 / span 3;
+    }
+    &:disabled{
+        color: #666;
     }
     color: #eee;
     height: 100%;
