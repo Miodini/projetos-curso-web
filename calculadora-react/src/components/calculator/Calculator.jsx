@@ -23,6 +23,7 @@ export default class Calculator extends Component{
         })
     }
     click(type, value){
+        console.log(this.state.result, this.lastButtonType, this.lastOperation)
         // Clear
         if(value === 'C' || this.state.disableButton){
             this.reset()
@@ -30,14 +31,14 @@ export default class Calculator extends Component{
         }
         // Digito
         if(type === 'digit'){
-            // Reabilita os botões se estiverem desabilitados
-            
             if(this.lastButtonType === 'op'){    // Substituir resultados mostrados
                 this.memory = this.state.result
                 this.setState({result: value})
             }
-            else if((this.state.result === '0' && value !== '.') || this.lastOperation === '=')   // Substituir zeros sozinhos ou o resultado final
+            else if((this.state.result === '0' && value !== '.') || this.lastOperation === '='){   // Substituir zeros sozinhos ou o resultado final
+                this.lastOperation = null
                 this.setState({result: value})
+            }
             else if(value !== '.' || (value === '.' && !this.state.result.includes('.')))  // Impede a ocorrência de 2 pontos no mesmo número
                 this.setState({result: this.state.result + value})
         }
